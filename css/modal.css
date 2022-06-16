@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+/*Estilos de "ingresar dentro del modal"*/
+.btn{
+    background: #0d1927;
+    font-family: 'Poppins';
+    color: #ffffff;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    transition: .3s;
+}
+
+/*Estilos de transición*/
+.btn:hover{
+    background: #2b4c72;
+}
+
+/*Caracteristicas del modal*/
+.modalContainer1{
+    display: flex;
+    background: #5a8cc449;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0; /* para que no se vea el modal*/
+}
+
+/* Color de texto y fondo del modal */
+.modal{
+    background: #ffffff;
+    width: 300px;
+    max-width: 100%;
+    padding: 20px 50px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    box-shadow: 0 2px 4px #383838;
+    text-align: center;
+
+}
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}

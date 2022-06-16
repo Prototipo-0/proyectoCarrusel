@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes cambiando</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+    <!-- El header contiene un navegador el cuál contiene un div con el botón del modal para inciar sesión -->
+    <header>
+        <nav>
+            <div>
+                <button class="inicio" id="inicio">iniciar Sesión</button>
+            </div>
+            <div>
+                <p id="demo"></p>
+            </div>
+        </nav>
+    </header>
+    <!-- El main contiene el slide de las imagenes.-->
+    <main>
+        <!-- Creamos un div principal que contiene las imagenes del slide -->
+        <div class="contSlide">
+            <!-- "imagenesTransi" contiene la enúmeración de la imagen, imagen y descripción para acoplar el css -->
+            <!-- Contenedor primera imagen -->
+            <div class="imagenesTransi">
+                <!-- Enumeración de imagen (1/5) -->
+                <div class="enumerarImagen">1 / 5</div>
+                <img src="img/imagen1.jpg" alt="Imagen, Consola PSP." >
+                <div class="descripcion">Consola PSP.</div>
+            </div>
+            <!-- Contenedor segunda imagen -->
+            <div class="imagenesTransi">
+                <!-- Enumeración de imagen (2/5) -->
+                <div class="enumerarImagen">2 / 5</div>
+                <img src="img/imagen2.jpg" alt="Imagen, Mando super Nintendo (Antiguo)." >
+                <div class="descripcion">Mando super Nintendo (Antiguo).</div>
+            </div>
+            <!-- Contenedor tercera imagen -->
+            <div class="imagenesTransi">
+                <!-- Enumeración de imagen (3/5) -->
+                <div class="enumerarImagen">3 / 5</div>
+                <img  src="img/imagen3.jpg" alt="Imagen, Control de XBOX." >
+                <div class="descripcion">Control de XBOX.</div>
+            </div>
+            <!-- Contenedor cuarta imagen -->
+            <div class="imagenesTransi">
+                <!-- Enumeración de imagen (4/5) -->
+                <div class="enumerarImagen">4 / 5</div>
+                <img  src="img/Imaginacion.jpg" alt="Imagen, Incentivar tú imaginación." >
+                <div class="descripcion">Incentivar tu imaginación para el trabajo</div>
+            </div>  
+            <!-- Contenedor quinta imagen -->
+            <div class="imagenesTransi">
+                <!-- Enumeración de imagen (5/5) -->
+                <div class="enumerarImagen">5 / 5</div>
+                <img  src="img/seTupIdeal.jpg" alt="Imagen, Setup Ideal." >
+                <div class="descripcion">Setup ideal para el futuro.</div>
+            </div>   
+            <!-- Botones para cambiar de imagen -->
+            <a class="anterior" onclick="movImagen(-1)"> &#10094; </a>
+            <a class="siguiente" onclick="movImagen(1)"> &#10095; </a>
+        </div>
+        <br>
+        <div class="contHorientacion">
+            <span class="boton" onclick="orientar(1)"></span>
+            <span class="boton" onclick="orientar(2)"></span>
+            <span class="boton" onclick="orientar(3)"></span>
+            <span class="boton" onclick="orientar(4)"></span>
+            <span class="boton" onclick="orientar(5)"></span>
+        </div>
+    </main>
+    <!-- ventana modal -->
+    <div class="modalContainer1" id="modalContainer">
+        <div class="modal">
+            <h2>ingreso</h2>
+            <form action="#">
+                <div>
+                    <!-- Primer dato solicitado en el modal -->
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" required>
+                </div>
+            
+                <div>
+                    <!-- Segunda dato solicitado n el modal -->
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña">
+                </div>
+            </form>
+                <button class="btn" id="ingresar" onclick="modificar ()">ingresar</button>
+        </div>
+    </div>
+    
+    <footer>
+        <div></div>
+    </footer>
+    
+    <script src="js/functions.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
